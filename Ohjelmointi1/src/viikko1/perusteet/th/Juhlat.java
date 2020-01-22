@@ -1,6 +1,5 @@
 package viikko1.perusteet.th;
 
-
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
@@ -16,7 +15,7 @@ public class Juhlat {
 		System.out.println("Pulloja tarvitaan " + df.format(kappaleMäärä) + " kappaletta");
 		double ylimääräinen = pullo - Math.ceil(aikuistenMäärä % pullo);
 		System.out.println("Viimeisestä pullosta jää " + df.format(ylimääräinen) + " lasia");
-
+		scanner.close();
 	}
 
 }

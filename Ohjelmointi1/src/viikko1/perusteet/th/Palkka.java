@@ -1,3 +1,5 @@
+package viikko1.perusteet.th;
+
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
@@ -31,6 +33,7 @@ public class Palkka {
 		System.out.println("Työeläkevakuutusmaksun osuus " + df.format(elakeMaksu));
 		System.out.println("Työttömyysvakuutuksen osuus " + df.format(vakuutusMaksu));
 		System.out.println("Käteen jää " + df.format(nettopalkka));
+		scanner.close();
 	}
 
 }

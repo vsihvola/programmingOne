@@ -1,3 +1,5 @@
+package viikko1.perusteet.th;
+
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 

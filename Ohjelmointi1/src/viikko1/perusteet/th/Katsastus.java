@@ -1,14 +1,13 @@
+package viikko1.perusteet.th;
 import java.util.Scanner;
 
 public class Katsastus {
-	
-	public static void main (String[] args) {
+
+	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Onko 1=katsastus, 2=jälkitarkastus: ");
 		int toiminto = scanner.nextInt();
-		
-		
-		
+
 		int kokonaisSumma = 0;
 		if (toiminto == 1) {
 			kokonaisSumma = kokonaisSumma + 50;
@@ -26,10 +25,10 @@ public class Katsastus {
 		} else if (toiminto == 2) {
 			kokonaisSumma = kokonaisSumma + 30;
 		}
-		
-		
-		System.out.println("Hinta on "+kokonaisSumma);
-		
+
+		System.out.println("Hinta on " + kokonaisSumma);
+		scanner.close();
+
 	}
-	
+
 }

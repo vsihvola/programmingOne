@@ -1,3 +1,5 @@
+package viikko1.perusteet.th;
+
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
