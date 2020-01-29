@@ -12,7 +12,6 @@ public class RekisterinumeroTarkastin {
 		String[] splitted;
 		String rekisteriNro = "";
 		String letters = "";
-
 		while (end == false) {
 			System.out.print("Syötä rekisterinumero (q-kirjain lopettaa): ");
 			rekisteriNro = scanner.nextLine();
