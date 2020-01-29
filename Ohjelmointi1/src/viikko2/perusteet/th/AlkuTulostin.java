@@ -10,6 +10,7 @@ public class AlkuTulostin {
 		System.out.print("Kirjoita sana: ");
 		String theWord = scanner.nextLine();
 		String output = "";
+
 		for (int i = 0; i < theWord.length(); i++) {
 			output += theWord.charAt(i);
 			System.out.println(output);
