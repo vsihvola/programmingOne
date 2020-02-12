@@ -4,30 +4,50 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Lotto {
+public class Lotto extends Leikkaus {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
 		Scanner scanner = new Scanner(System.in);
 		List<Integer> input = new ArrayList<>();
 		List<Integer> lineCheck = new ArrayList<>();
-		int temp;
-
+		int temp = 0;
+		
 		System.out.print("Anna oikea rivi (7 numeroa + lisänumero): ");
-		while (input.size() < 7) {
-			input.add(scanner.nextInt());
-
+		while(input.size()<8) {
+			
+				input.add(scanner.nextInt());
+			
 		}
-
-		System.out.println("Anna tarkastettava rivi (7 numeroa): ");
-		while (lineCheck.size() < 6) {
+		
+		System.out.print("Anna tarkastettava rivi (7 numeroa): ");
+		while(lineCheck.size()<7) {
 			lineCheck.add(scanner.nextInt());
 		}
-
+		
 		scanner.close();
+		int extra = input.get(input.size()-1);
+		input.remove(input.size()-1);
+		
+		List<Integer> rightOnes = Leikkaus.laskeLeikkaus(input, lineCheck);
+		
+		
+		boolean checkExtra = lineCheck.contains(extra);
+		
+		
+		
+		
+		if (checkExtra == true) {
+			System.out.println(System.lineSeparator() + rightOnes.size() + " oikein ja lisänumero.");
+		} else {
+			System.out.println(System.lineSeparator() + rightOnes.size() + " oikein.") ;
+		}
 
-		System.out.println(laskeLeikkaus(input, lineCheck));
+		
+		
+	
+		
 
 	}
 
