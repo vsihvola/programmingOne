@@ -1,7 +1,5 @@
 package viikko5.perusteet.th;
 
-import java.text.DecimalFormat;
-
 public class Kirja {
 
 	private String name;
@@ -11,14 +9,11 @@ public class Kirja {
 
 	public Kirja(String name, String isbn, double price, int yearOfPublish) {
 
-		DecimalFormat df = new DecimalFormat("###,###.00");
 		this.name = name;
 		this.isbn = isbn;
 		this.price = price;
 		this.yearOfPublish = yearOfPublish;
 
-		System.out.println("Nimi: " + name + "\nIsbn: " + isbn + "\nHinta: " + df.format(price) + "\nJulkaisuvuosi: "
-				+ yearOfPublish);
 	}
 
 	public Kirja() {
@@ -58,9 +53,10 @@ public class Kirja {
 	}
 
 	public String toString() {
-		return System.lineSeparator() + "Kirja [nimi=" + Kirja.this.getName() + ", isbn=" + Kirja.this.getIsbn()
-				+ ", hinta=" + Kirja.this.getPrice() + ", vuosi=" + Kirja.this.getYearOfPublish() + "]"
-				+ System.lineSeparator();
+		System.out.println(System.lineSeparator() + "Kirja [nimi=" + Kirja.this.getName() + ", isbn="
+				+ Kirja.this.getIsbn() + ", hinta=" + Kirja.this.getPrice() + ", vuosi=" + Kirja.this.getYearOfPublish()
+				+ "]" + System.lineSeparator());
+		return null;
 	}
 
 }
